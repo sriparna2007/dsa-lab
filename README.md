@@ -191,6 +191,6 @@ gcc program_name.c -o program_name
 
 ---
 <div align="center">
-  <i>Programmed with ❤️ by <a href="https://github.com/sriparna 2007"><b>devrizu</b></a></i><br>
+  <i>Programmed with ❤️ by <a href="https://github.com/sriparna 2007"><b>Sriparna</b></a></i><br>
   <i>As part of the DSA Lab coursework.</i>
 </div>
