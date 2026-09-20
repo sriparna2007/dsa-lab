@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+void printFinalArray(int array[], int size) {
+    printf("\nFinal Sorted Array: ");
+    for (int i = 0; i < size; ++i) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+}
+
+void modifiedBubbleSort(int array[], int size) {
+    for (int step = 0; step < size - 1; ++step) {
+        int swapped = 0;
+        
+        for (int i = 0; i < size - step - 1; ++i) {
+            if (array[i] > array[i + 1]) {
+                int temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+                swapped = 1;
+            }
+        }
+
+        printf("Step %d: ", step + 1);
+        for (int k = 0; k < size; ++k) {
+            printf("%d ", array[k]);
+        }
+        printf("\n");
+
+        if (swapped == 0) {
+            printf("No swaps occurred in Step %d. The array is already sorted, stopping early.\n", step + 1);
+            break;
+        }
+    }
+}
+
+int main() {
+    int size;
+    
+    printf("Enter the number of elements: ");
+    scanf("%d", &size);
+    
+    int data[size];
+    
+    printf("Enter %d integers: ", size);
+    for (int i = 0; i < size; ++i) {
+        scanf("%d", &data[i]);
+    }
+    
+    printf("\n--- Sorting Process ---\n");
+    modifiedBubbleSort(data, size);
+    
+    printFinalArray(data, size);
+    
+    return 0;
+}
